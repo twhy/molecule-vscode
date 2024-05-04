@@ -1,0 +1,58 @@
+
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Molecule",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#angle-brackets"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"match": "//.*$",
+					"name": "comment.line"
+				},
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.block"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.other",
+					"match": "\\b(byte|array|struct|vector|table|option|union)\\b"
+				},
+				{
+					"name": "keyword.other",
+					"match": "\\b(import)\\b"
+				}
+			]
+		},
+		"angle-brackets": {
+			"patterns": [
+				{
+					"begin": "<",
+					"end": ">",
+					"beginCaptures": {
+						"0": { "name": "constant" }
+					},
+					"endCaptures": {
+						"0": { "name": "constant" }
+					}
+				}
+			]
+		}
+	},
+	"scopeName": "source.mol"
+}

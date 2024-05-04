@@ -1,0 +1,26 @@
+{
+  "name": "molecule-vscode",
+  "displayName": "Molecule",
+  "description": "Molecule Syntax Highlighting for Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "publisher": "twhy",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mol",
+      "aliases": ["Molecule", "mol"],
+      "extensions": [".mol",".molecule"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mol",
+      "scopeName": "source.mol",
+      "path": "./syntaxes/mol.tmLanguage.json"
+    }]
+  }
+}
