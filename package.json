@@ -2,6 +2,7 @@
   "name": "molecule-vscode",
   "displayName": "Molecule",
   "description": "Molecule Syntax Highlighting for Visual Studio Code",
+  "icon": "images/molecule.png",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.89.0"
